@@ -1,0 +1,35 @@
+<script src="./assets/js/bundle.js?ver=2.9.0"></script>
+<script src="./assets/js/scripts.js?ver=2.9.0"></script>
+<script src="./assets/js/libs/datatable-btns.js?ver=2.9.0"></script>
+<!-- <script src="./assets/js/libs/fullcalendar.min.js"></script> -->
+<script src="./assets/js/libs/fullcalendar.js?ver=2.4.0"></script>
+<script src="./assets/js/qrcode/qrcode-with-logo.min.js"></script>
+<script src="./assets/js/qrcode/crypto-js.min.js"></script>
+<script src="./assets/js/qrcode/aes.min.js"></script>
+<script src="./assets/js/jszip-utils.js"></script>
+<!-- <script src="./assets/js/ttd/signature_pad.umd.js"></script> -->
+<!-- <script src="./assets/js/apps/calendar.js?ver=2.4.0"></script> -->
+<!-- <script src="./assets/js/easyqr/canvas2svg.js"></script> -->
+<!-- <script src="./assets/js/easyqr/easy.qrcode.js"></script> -->
+
+
+<script>
+    function cekDark() {
+        let theme = localStorage.getItem("theme") || '';
+        if (theme != '') {
+            $('.dark-switch').addClass('active');
+            $('body').addClass('dark-mode');
+        } else {
+            $('.dark-switch').removeClass('active');
+            $('body').removeClass('dark-mode');
+        }
+    }
+
+    function darkMode() {
+        if ($('body').hasClass('dark-mode')) {
+            localStorage.setItem("theme", "");
+        } else {
+            localStorage.setItem("theme", "dark-mode");
+        }
+    }
+</script>
